@@ -1,0 +1,147 @@
+.section {
+  width: 100%;
+  padding: clamp(3rem, 8vh, 5rem) 0;
+  background-color: #f5f8ff;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+/* LEFT */
+.content {
+  max-width: 30rem;
+  margin-left: 6rem;
+  margin-right: 3rem;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: #8d96bd;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 500;
+  color: #3d4f9f;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #8d96bd;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.primary {
+  padding: 0.6rem 1.4rem;
+  background-color: #4c85ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.secondary {
+  padding: 0.6rem 1.4rem;
+  background: transparent;
+  color: #adb5e5;
+  border: 1px solid #d2d7ff;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+/* RIGHT */
+
+.preview {
+  position: relative;
+  width: 100%;
+  min-height: 24rem;
+}
+
+.card {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+/* positions */
+.desktop {
+  .desktop {
+    width: clamp(18rem, 40vw, 30rem);
+    top: -1rem;
+    left: 4rem;
+    z-index: 1;
+  }
+}
+
+.mobile {
+  width: clamp(8rem, 10vw, 9rem);
+  top: 8rem;
+  left: 22.5rem;
+  z-index: 3;
+}
+
+.widget {
+  width: clamp(7rem, 9vw, 9rem);
+  top: 5rem;
+  left: -4rem;
+  z-index: 2;
+}
+
+/* tablet */
+@media (max-width: 64em) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .preview {
+    min-height: 24rem;
+    margin-top: 3rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 48em) {
+  .preview {
+    min-height: 20rem;
+  }
+
+  .desktop {
+    width: 18rem;
+  }
+
+  .mobile {
+    width: 9rem;
+    left: 11rem;
+  }
+
+  .widget {
+    width: 7.5rem;
+    left: 5rem;
+  }
+}
