@@ -4,6 +4,7 @@ import "./App.css";
 import Hero from "./components/hero";
 import Logos from "./components/logos";
 import PlanManage from "./components/planManage";
+import Features from "./components/features";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Logos />
       <PlanManage />
+      <Features />
     </>
   );
 }
